@@ -1,0 +1,8 @@
+
+---
+  - hosts: all
+    tasks:
+      - name: 'to install nginx webserver'
+        yum:   pkg=nginx state=installed 
+      - name: start nginx
+        service: name=nginx state=started
